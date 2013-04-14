@@ -1,5 +1,7 @@
 # Carrierwave::Cascade
 
+[![Build Status](https://travis-ci.org/kjg/carrierwave-cascade.png?branch=master)](https://travis-ci.org/kjg/carrierwave-cascade)
+
 TODO: Write a gem description
 
 ## Installation
