@@ -17,7 +17,7 @@ Gem::Specification.new do |spec|
   spec.summary       = %q{Retrieve from a secondary storage when the file is
     not in the primary storage.
   }
-  spec.homepage      = ""
+  spec.homepage      = "https://github.com/kjg/carrierwave-cascade"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files`.split($/)
