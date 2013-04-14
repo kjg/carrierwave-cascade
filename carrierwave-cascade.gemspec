@@ -8,8 +8,15 @@ Gem::Specification.new do |spec|
   spec.version       = Carrierwave::Cascade::VERSION
   spec.authors       = ["Kevin Glowacz"]
   spec.email         = ["kevin@glowacz.info"]
-  spec.description   = %q{TODO: Write a gem description}
-  spec.summary       = %q{TODO: Write a gem summary}
+  spec.description   = %q{A storage plugin for carrierwave that will
+    retrieving files from a secondary storageif the file is not present in the
+    primary storage. New files will always be stored in the primary storage.
+    This is perfect for use while migrating from one storage to another, or to
+    avoid polluting a production environment when running a staging mirror.
+  }
+  spec.summary       = %q{Retrieve from a secondary storage when the file is
+    not in the primary storage.
+  }
   spec.homepage      = ""
   spec.license       = "MIT"
 
