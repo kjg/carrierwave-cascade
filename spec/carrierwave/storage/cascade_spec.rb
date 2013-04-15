@@ -78,29 +78,14 @@ describe CarrierWave::Storage::Cascade do
         primary_file.stub(:exists? => false)
       end
 
-      context "when file exists in secondary_storage" do
-        before do
-          secondary_file.stub(:exists? => true)
-        end
-
-        it "returns a secondary_file proxy" do
-          cascade.retrieve!('file').should be_a(CarrierWave::Storage::Cascade::SecondaryFileProxy)
-        end
-
-        it "returns a proxy to the real secondary_file" do
-          cascade.retrieve!('file').real_file.should == secondary_file
-        end
+      it "returns a secondary_file proxy" do
+        cascade.retrieve!('file').should be_a(CarrierWave::Storage::Cascade::SecondaryFileProxy)
       end
 
-      context "when file doesn't exist in secondary_storage" do
-        before do
-          secondary_file.stub(:exists? => false)
-        end
-
-        it "returns the primary_file" do
-          cascade.retrieve!('file').should == primary_file
-        end
+      it "returns a proxy to the real secondary_file" do
+        cascade.retrieve!('file').real_file.should == secondary_file
       end
+
     end
   end
 end
