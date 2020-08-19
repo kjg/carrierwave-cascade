@@ -55,6 +55,10 @@ module CarrierWave
         def respond_to?(*args)
           @real_file.respond_to?(*args)
         end
+
+        def method(*args)
+          real_file.send(:method, *args)
+        end
       end
 
     end
